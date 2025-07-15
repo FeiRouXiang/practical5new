@@ -6,12 +6,13 @@ import 'Product/card_dart.dart';
 import 'Product/CartProvider.dart';
 
 final List<Item> catalog = [
-  Item(1, 'Shoes'),
-  Item(2, 'Hats' ),
-  Item(3, 'Shirts'),
-  Item(4, 'Tie', ),
-  Item(5, 'Pants'),
+  Item(1, 'Shoes', 59.99, "shoes.jpg"),
+  Item(2, 'Hats', 19.99, "hats.jpg"),
+  Item(3, 'Shirts', 29.99, "shirts.jpg"),
+  Item(4, 'Tie', 14.99, "tie.jpg"),
+  Item(5, 'Pants', 49.99, "pants.jpg"),
 ];
+
 
 
 void main() {
@@ -98,9 +99,16 @@ class CartItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // var is variant(any data type)
     var item = catalog[index];
     return Row(
       children: [
+
+        Image.asset(
+          'assets/images/${item.image}',
+          width: 60,
+          height: 60,
+        ),
 
         // Image.asset(
         //   'assets/images/${item.image}',

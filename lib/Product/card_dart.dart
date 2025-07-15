@@ -58,6 +58,13 @@ class CartItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+
+        Image.asset(
+          'assets/images/${item.image}',
+          width: 60,
+          height: 60,
+        ),
+        
         Text('$item'),
         const Expanded(child: SizedBox()),
         TextButton(

@@ -2,17 +2,22 @@
 class Item{
   int _id;
   String _name;
+  double _price;
+  String _image;
 
-  Item(this._id, this._name);
+  Item(this._id, this._name, this._price, this._image);
 
   int get itemID => _id;
 
   String get itemName => _name;
 
+  double get price => _price;
+
+  String get image => _image;
 
   @override
   String toString() {
-    return '$_id $_name';
+    return '$_name (RM $_price)';
   }
 
 }
